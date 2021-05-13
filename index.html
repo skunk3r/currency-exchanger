@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>exchanger</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header><h1>exchange rates</h1></header>
+	<main>
+		<div id="initial" class="block">
+			<p class="flex-column">in</p>
+			<div class="currency flex-column">
+				<div data-value="rub" data-index="0" class="selected">
+					<div class="flag"></div>
+					<span class="text">rub</span>
+					<div class="arrow"></div>
+				</div>
+				<ul class="sub">
+					<li data-value="usd" data-index="1"><div class="flag"></div><span class="text">usd</span></li>
+					<li data-value="eur" data-index="2"><div class="flag"></div><span class="text">eur</span></li>
+				</ul>
+			</div>
+			<div class="flex-column"><div class="input-wrapper"><input type="number" class="amount in" disabled="true"></div></div>
+		</div>
+		<div id="rate">
+			<div id="button-wrapper"><button id="swap">&#8644;</button></div>
+			<h3>current rate</h3>
+		</div>
+		<div id="required" class="block">
+			<p class="flex-column">out</p>
+			<div class="currency" class="flex-column">
+				<div data-value="usd" data-index="1" class="selected">
+					<div class="flag"></div>
+					<span class="text">usd</span>
+					<div class="arrow"></div>
+				</div>
+				<ul class="sub">
+					<li data-value="rub" data-index="0"><div class="flag"></div><span class="text">rub</span></li>
+					<li data-value="eur" data-index="2"><div class="flag"></div><span class="text">eur</span></li>
+				</ul>
+			</div>
+			<div class="flex-column"><div class="input-wrapper"><input type="number" class="amount out" disabled="true"></div></div>
+		</div>
+	</main>
+	<footer>
+		<p>exchange rates from</p>
+		<a href="https://free.currencyconverterapi.com/" target="_blank">free.currencyconverterapi.com</a>
+	</footer>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
