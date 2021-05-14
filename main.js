@@ -1,9 +1,6 @@
 let currencyIn = document.body.querySelector('#initial .currency');
 let currencyOut = document.body.querySelector('#required .currency');
 let activeMenu;
-let val = {USD_RUB: 74.866901,
-		  EUR_RUB: 89.891144,
-		  USD_EUR: 0.832861};
 let rates = {};
 let inputs = document.querySelectorAll('.amount');
 
@@ -163,22 +160,16 @@ function convert() {
 		let str = currencyIn + '_' + currencyOut;
 		let strInvert = currencyOut + '_' + currencyIn;
 
-		inputIn.value = selfEdit(inputIn.value);
-
 		for (let prop in rates) {
 			if (str == prop) {
+				inputIn.value = selfEdit(inputIn.value);
 				inputOut.value = editValue(inputIn.value * rates[prop]);
 			} else if (strInvert == prop) {
+				inputIn.value = selfEdit(inputIn.value);
 				inputOut.value = editValue(inputIn.value / rates[prop]);
 			}
 		}
 	}
-}
-
-function shortenValue(value) {
-	value = value.toString().replace(/\s+/g, '');
-	value = value.replace(/\,/g, '.');
-	return +value;
 }
 
 function selfEdit(value) {
