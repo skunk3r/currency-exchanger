@@ -1,7 +1,8 @@
 # Конвертер валют
-Получает курс сетевым запросом у бесплатного API(используется мой ключ[максимум 100 запросов в час]).
-Адаптивный дизайн. Использовал ванильный JS.
+Получает курс сетевым запросом у бесплатного API(используется мой ключ[максимум 100 запросов в час])  
+Адаптивный дизайн
+Использован ванильный JS
 
 Скриншоты
-![alt text](screenshots/screenshot1.png "screenshot1")
-![alt text](screenshots/screenshot2.png "screenshot2")
+![Скрин](screenshots/screenshot1.png "screenshot1")
+![Скрин](screenshots/screenshot2.png "screenshot2")
