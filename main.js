@@ -4,20 +4,6 @@ let activeMenu;
 let rates = {};
 let inputs = document.querySelectorAll('.amount');
 
-function setBodyHeight() {
-	let scrollHeight = Math.max(
-		document.body.scrollHeight, document.documentElement.scrollHeight,
-		document.body.offsetHeight, document.documentElement.offsetHeight,
-		document.body.clientHeight, document.documentElement.clientHeight
-	);
-
-	document.body.style.height = scrollHeight + 'px';
-}
-
-setBodyHeight();
-
-window.addEventListener('resize', setBodyHeight);
-
 function select(li, dontShowMenu) {
 	let selected = li.closest('.currency').querySelector('.selected');
 	let dataValue = selected.dataset.value;
@@ -218,7 +204,6 @@ function update() {
 		for(let input of inputs) input.disabled = true;
 		let p = document.querySelector('.current-rate');
 		if (p) p.innerHTML += `: ${err.toLowerCase()}`;
-		//return err
 	})
 }
 
